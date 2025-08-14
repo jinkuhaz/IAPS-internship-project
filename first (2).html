@@ -1,0 +1,211 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>IAPS Academy, Biswanath</title>
+<link rel="stylesheet" href="first (1).css">
+<body>
+<header>
+    <div class="logo">
+    <img src="first (1).png" alt="IAPS ACADEMY,BISWANATH">
+    </div>
+    <h5><nav>
+        <a href="#courses">Courses</a>
+        <a href="#admission">Admission</a>
+        <a href="#contact">Contact</a>
+    </nav></h5>
+</header>
+
+<!-- Hero with Fade Auto-Slider -->
+<div class="slider">
+    <div class="slides">
+        <div class="slide active">
+            <img src="first (1).jpg" alt="">
+            <div class="slide-text">Welcome to IAPS Academy, Biswanath</div>
+        </div>
+        <div class="slide">
+            <img src="first (2).jpg" alt="">
+            <div class="slide-text">Quality Education with Expert Faculty</div>
+        </div>
+        <div class="slide">
+            <img src="first (3).jpg" alt="">
+            <div class="slide-text">Your Future Starts Here</div>
+        </div>
+        <div class="slide">
+            <img src="first (4).jpg" alt="">
+            <div class="slide-text">State-of-the-Art Facilities</div>
+        </div>
+        <div class="slide">
+            <img src="first (5).jpg" alt="">
+            <div class="slide-text">Hands-On Practical Training</div>
+        </div>
+        <div class="slide">
+            <img src="first (6).jpg" alt="">
+            <div class="slide-text">Enroll Now & Build Your Future</div>
+        </div>
+    </div>
+
+    <!-- Navigation Dots -->
+    <div class="navigation">
+        <div class="bar active" onclick="showSlide(0)"></div>
+        <div class="bar" onclick="showSlide(1)"></div>
+        <div class="bar" onclick="showSlide(2)"></div>
+        <div class="bar" onclick="showSlide(3)"></div>
+        <div class="bar" onclick="showSlide(4)"></div>
+        <div class="bar" onclick="showSlide(5)"></div>
+    </div>
+</div>
+
+<section id="courses">
+    <h2>Courses Offered</h2>
+    <div class="courses">
+        <div class="course"><b>PGDCA</b><br>1 Year - ₹18,000</div>
+        <div class="course"><b>ADCA</b><br>1 Year - ₹15,000</div>
+        <div class="course"><b>DCA</b><br>6 Months - ₹12,000</div>
+        <div class="course"><b>Web Development</b><br>6 Months - ₹15,000</div>
+        <div class="course"><b>App Development</b><br>6 Months - ₹16,000</div>
+        <div class="course"><b>AI & Data Science</b><br>1 Year - ₹20,000</div>
+    </div>
+</section>
+
+<section id="admission">
+    <h2>Admission Form</h2>
+    <form id="myForm">
+        <input type="text" placeholder="First Name" required>
+        <input type="text" placeholder="Last Name" required>
+        <input type="text" placeholder="Father's Name" required>
+        <textarea placeholder="Permanent Address" required></textarea>
+        <input type="text" placeholder="District" required>
+        <input type="text" placeholder="State" required>
+        <input type="tel" placeholder="Phone Number" required>
+        <select required>
+            <option value="">Select Course Applied For</option>
+            <option>PGDCA (₹18,000)</option>
+            <option>ADCA (₹15,000)</option>
+            <option>DCA (₹12,000)</option>
+            <option>Web Development (₹15,000)</option>
+            <option>App Development (₹16,000)</option>
+            <option>AI & Data Science (₹20,000)</option>
+        </select>
+        <input type="text" placeholder="Occupation">
+        <input type="text" placeholder="Training Center Name">
+        <select required>
+            <option value="">Select Gender</option>
+            <option>Male</option>
+            <option>Female</option>
+            <option>Other</option>
+        </select>
+        <input type="email" placeholder="Email" required>
+        <select required>
+            <option value="">Select Caste</option>
+            <option>General</option>
+            <option>OBC</option>
+            <option>SC</option>
+            <option>ST</option>
+            <option>Other</option>
+        </select>
+        <input type="text" placeholder="Date of Birth">
+        <select>
+            <option value="">Select Religion</option>
+            <option>Hindu</option>
+            <option>Muslim</option>
+            <option>Christian</option>
+            <option>Sikh</option>
+            <option>Buddhist</option>
+            <option>Jain</option>
+            <option>Other</option>
+        </select>
+        <select required>
+            <option value="">Select Education Qualification</option>
+            <option>10th Pass</option>
+            <option>12th Pass</option>
+            <option>Graduate</option>
+            <option>Postgraduate</option>
+            <option>Diploma</option>
+        </select>
+        <select required>
+            <option value="">Select Working Experience</option>
+            <option>None</option>
+            <option>1-2 Years</option>
+            <option>3-5 Years</option>
+            <option>5+ Years</option>
+        </select>
+        <select required>
+            <option value="">Previous Skill Course Attended</option>
+            <option>None</option>
+            <option>Basic Computer Course</option>
+            <option>DCA</option>
+            <option>ADCA</option>
+            <option>Web Development</option>
+            <option>Other</option>
+        </select>
+        <input type="text" placeholder="Aadhaar Card Number">
+        <input type="text" placeholder="PAN Card Number">
+      <a href="submit.html"><button type="submit">Submit Application</button></a>
+    </form>
+</section>
+
+<section id="contact">
+    <h2>Contact Us</h2>
+    <p>📍 IAPS Academy, Main Road, Biswanath, Assam, India - 784176</p>
+    <p>📞 +91 9876543210</p>
+    <p>📧 info@iapsacademybiswanath.edu.in</p>
+</section>
+
+<footer>
+    &copy; 2025 IAPS Academy, Biswanath. All Rights Reserved.
+</footer>
+
+<script>
+    let slides = document.querySelectorAll('.slide');
+    let dots = document.querySelectorAll('.bar');
+    let currentIndex = 0;
+    let slideInterval = setInterval(nextSlide, 4000);
+
+    function showSlide(index) {
+        slides.forEach((slide, i) => {
+            slide.classList.remove('active');
+            dots[i].classList.remove('active');
+            if (i === index) {
+                slide.classList.add('active');
+                dots[i].classList.add('active');
+            }
+        });
+        currentIndex = index;
+    }
+
+    function nextSlide() {
+        currentIndex = (currentIndex + 1) % slides.length;
+        showSlide(currentIndex);
+    }
+
+    dots.forEach((dot, index) => {
+        dot.addEventListener('click', () => {
+            clearInterval(slideInterval);
+            showSlide(index);
+            slideInterval = setInterval(nextSlide, 4000);
+        });
+    });
+  document.getElementById("myForm").addEventListener("submit", function(event) {
+    event.preventDefault(); // Prevent form from refreshing the page
+
+    const inputs = this.querySelectorAll("input, select, textarea");
+    let result = "Form Submitted Successfully!\n\n";
+
+    inputs.forEach(input => {
+      const label = input.placeholder || input.name || input.id || "Field";
+      const value = input.value.trim();
+      if (value) {
+        result += `${label}: ${value}\n`; 
+      }
+    });
+
+    alert(result); // Show data in alert
+    this.reset();  // Optional: Reset form after submission
+  });
+
+</script>
+
+</body>
+</html>
